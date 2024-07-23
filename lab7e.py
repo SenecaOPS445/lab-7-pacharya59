@@ -1,12 +1,20 @@
 #!/usr/bin/env python3
-# Student ID: [seneca_id]
+# Student ID: pacharya9(100706225)
 class Time:
     """Simple object type for time of the day.
         data attributes: hour, minute, second
         function attributes: __init__, __str__, __repr__
                             time_to_sec, format_time,
                             change_time, sum_time
-    """
+"""
+    def __str__(self):
+        '''return a string representation for the object self'''
+        return f'{self.hour:02}:{self.minute:02}:{self.second:02}'
+
+    def __repr__(self):
+        '''return a string representation for the object self'''
+        return f'{self.hour:02}.{self.minute:02}.{self.second:02}'
+
     def __init__(self,hour=12,minute=0,second=0):
         """constructor for time object"""
         self.hour = hour
